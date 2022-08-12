@@ -1,4 +1,6 @@
 ## Rhythm Grover
+##Assistant Professor
+## IIT Guwahati
 
 You can use the [editor on GitHub](https://github.com/rhythmgrover/rhythmgrover.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
 
