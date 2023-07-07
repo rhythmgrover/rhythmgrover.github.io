@@ -2241,7 +2241,7 @@ button,
         transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
         color: #9fa3a6;
         content: '\f078';
-        position: absolute;
+        position: fixed;
         right: 0; }
       #menu ul a.opener:hover:before, #menu ul span.opener:hover:before {
         color: #2c6960; }
