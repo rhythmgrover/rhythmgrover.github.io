@@ -1907,7 +1907,7 @@ button,
     height: 2em;
     line-height: 2em;
     opacity: 0.325;
-    position: fixed;
+    position: absolute;
     right: 0;
     text-align: center;
     top: 0;
@@ -1930,13 +1930,13 @@ button,
   transition: margin-left 0.5s ease, box-shadow 0.5s ease;
   background-color: #f5f6f7;
   font-size: 0.9em;
-  position: fixed;
+  position: relative;
   width: 26em; }
   #sidebar h2 {
     font-size: 1.38889em; }
   #sidebar > .inner {
     padding: 2.22222em 2.22222em 2.44444em 2.22222em ;
-    position: fixed;
+    position: relative;
     width: 26em; }
     #sidebar > .inner > * {
       border-bottom: solid 2px rgba(210, 215, 217, 0.75);
@@ -2034,7 +2034,7 @@ button,
         left: 0;
         overflow-x: hidden;
         overflow-y: auto;
-        position: fixed;
+        position: absolute;
         top: 0; }
         #sidebar > .inner:after {
           content: '';
@@ -2065,7 +2065,7 @@ button,
         content: '';
         height: 3.5em;
         left: 1em;
-        position: fixed;
+        position: absolute;
         top: 1em;
         width: 5em; } }
 
@@ -2241,7 +2241,7 @@ button,
         transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
         color: #9fa3a6;
         content: '\f078';
-        position: fixed;
+        position: absolute;
         right: 0; }
       #menu ul a.opener:hover:before, #menu ul span.opener:hover:before {
         color: #2c6960; }
