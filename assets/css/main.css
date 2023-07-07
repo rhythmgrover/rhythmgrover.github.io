@@ -2034,7 +2034,7 @@ button,
         left: 0;
         overflow-x: hidden;
         overflow-y: auto;
-        position: absolute;
+        position: fixed;
         top: 0; }
         #sidebar > .inner:after {
           content: '';
@@ -2065,7 +2065,7 @@ button,
         content: '';
         height: 3.5em;
         left: 1em;
-        position: absolute;
+        position: fixed;
         top: 1em;
         width: 5em; } }
 
