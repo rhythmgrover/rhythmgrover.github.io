@@ -2088,6 +2088,7 @@ button,
     margin-bottom: 0; }
   #header .logo {
     display: inline-block;
+    text-align: right;
     border-bottom: 0;
     color: inherit;
     font-family: "Roboto Slab", serif;
