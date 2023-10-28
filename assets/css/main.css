@@ -2289,7 +2289,7 @@ body {font-family: Verdana, sans-serif;}
 .month {
   padding: 70px 25px;
   width: 100%;
-  background: #35a1a4;
+  background: #0c292a;
   text-align: center;
 }
 
@@ -2352,6 +2352,6 @@ body {font-family: Verdana, sans-serif;}
 /* Highlight the "current" day */
 .days li .active {
   padding: 5px;
-  background: #1abc9c;
+  background: #204b4e;
   color: white !important
 }
