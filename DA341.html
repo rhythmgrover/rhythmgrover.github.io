@@ -1,0 +1,842 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>DA 341 Applied Time Series Analysis</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head> <!--git status -->
+	<body class="is-preload">
+
+        <!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="DA341.html" class="logo"><strong></strong> </a>  
+									<ul class="icons">
+										
+									</ul>
+								</header>
+
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<header>
+											<h1>DA 341 Applied Time Series Analysis <br />
+											</h1>
+                                            <h2> Webpage for the course</h2>
+                                        </header>
+                                    </div>
+                                </section>
+                                <!--<p> This is the webpage for the DA 241. </p>
+                                <p> <span style="color:#297e9a"> Announcement 1:</span> Class tomorrow from 10 am to 10:55 am in 5103. And from 11 am to 11:55 am in 5001. </p>-->
+                                <!--<p> <span style="color:#297e9a"> Announcement 2:</span> Submit assignment 1 after renaming it as <span style="color:#9a2980">DA_241_Assignment1_NAME.pdf </span> today again between 9 pm and 10 pm on Teams. No late turn ins will be entertained. </p>-->
+
+                         
+                                <section>
+                                    <h2> Course Syllabus </h2>
+                                    <p> Fundamental components of time series; Preliminary tests: randomness, trend, seasonality; 
+                                        Estimation/elimination of trend and seasonality; Mathematical formulation of time series; 
+                                        Stationarity concepts; Auto Covariance and Autocorrelation functions of stationary time series and its properties; 
+                                        Linear stationary processes and their time-domain properties: AR, MA, ARMA, seasonal, non-seasonal and mixed models;
+                                         ARIMA models; Multivariate time series processes and their properties: VAR, VMA and VARMA; 
+                                         Parameter estimation of AR, MA, and ARMA models: LS approach, ML approach for AR, MA and ARMA models, 
+                                         Asymptotic distribution of MLE; Best Linear predictor and Partial autocorrelation function; 
+                                         Model-identification with ACF and PACF; Model order estimation techniques; 
+                                         Frequency domain analysis: spectral density and its properties and its estimation, Periodogram analysis.
+                                    </p>
+                        
+                                </section>
+
+                                <section> 
+                                <h2>Course Logistics</h2>
+                                <p>  </p>
+                                <ul>
+                                 <li>Schedule: Slot D1, 5:00 pm - 5:55 pm Wednesday, 4:00 pm - 4:55 pm Thursday, 3:00 pm - 3:55 pm Friday </li>
+                                <li> Venue: 5201, Core 5.</li>
+                               <!-- <li> Course Calendar </li> -->
+                                
+                                </ul>
+                                </section>
+                                <section> 
+                                    <h2> Course Evaluation (Tentative)</h2>
+                                    <p>  </p>
+                                        <ul>
+                                            <li> Attendance: 10% </li>
+                                            <li> Quizzes: 30% </li>
+                                            <li> Mid semester exam: 30% </li>
+                                            <li> End semester exam: 30% </li>
+                                        </ul>
+                                     
+                                </section>
+                                
+                                <section> 
+                                    <h2> Some references (not an exhaustive list) </h2>
+                                    <p> </p>
+                                        <ul>
+                                            <li> Ross, S.M., 2022. Simulation. Academic Press.</li>
+                                            <li> Ross, S.M., 1995. Stochastic processes. John Wiley & Sons. </li>
+                                            <li> Bertsekas, D. and Tsitsiklis, J.N., 2008. Introduction to probability (Vol. 1). Athena Scientific. </li> 
+                                            <li> Prof. Dootika Vats notes on Statistical Computing </li>
+                                            <li> Blitzstein, J.K., and Hwang J., 2019. Introduction to probability. Taylor & Francis Group, LLC. </li> 
+                                        </ul>
+                                     
+                                </section>
+
+
+                                <section>
+                                    <h2> Topics Covered during the weeks </h2>
+                                    
+                                        <table>
+                                            <tr>
+                                                <th> Lecture </th>  
+                                                <th> Date </th>
+                                                <th> Topic </th>
+                                                <th> Resources </th> 
+                                                <th> R codes </th> 
+                                            </tr>
+
+                                            <tr>
+                                                <td> 1 </td>
+                                                <td> 4-Jan-2024 </td>
+                                                <td> <ul> <li> First Handout </li> </ul> </td>
+                                                <td> <ul> <li> <a href = "assets/DA244-coursewebpage/first_handout_DA244.pdf"> First handout </a> </li> </ul> </td>  
+                                            </tr>
+
+                                            <tr>
+                                                <td> 2 </td>
+                                                <td> 8-Jan-2024 </td>
+                                                <td> <ul> <li> Review of Probability: Random variables: probabilities of events; expectation; independence; normal distribution; change of variables; lognormal distribution; exponential families.  </li> </ul> </td>
+                                                <td>  </td>  
+                                            </tr>
+
+                                            <tr>
+                                                <td> 3 </td>
+                                                <td> 11-Jan-2024 </td>
+                                                <td> <ul> <li> Review of Probability continued: Moment generating functions and related theorems; Weak Law of Large numbers (WLLN); Central limit theorem (CLT) </li> </ul> </td>
+                                                <td> <a href = "assets/DA244-coursewebpage/review.pdf"> Robert G. Gallager's notes </a> </td>  
+                                            </tr>
+
+                                            <tr>
+                                                <td> 4 </td>
+                                                <td> 12-Jan-2024 </td>
+                                                <td> <ul> <li> Proof of the CLT; Monte Carlo Simulations: Introduction; Some examples: Matching problem; Time until HH vs HT; Solving for an integral  </li> </ul> </td>
+                                                <td>  </td>  
+                                                <td> 
+                                                    <ul> 
+                                                        <li> <a href = "assets/DA244-coursewebpage/matching_card_simulation.R"> Matching problem simulation </a> </li>
+                                                        <li> <a href = "assets/DA244-coursewebpage/waiting_time_HH_fair_coin_tosses.R"> Time until HH in fair coin tosses simulation </a> </li>
+                                                        <li> <a href = "assets/DA244-coursewebpage/integral_monte_carlo.R"> Integral Computation </a> </li>
+                                                    </ul>
+                                                        
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td> 5 </td>
+                                                <td> 18-Jan-2024 </td>
+                                                <td> <ul> <li> Pseudorandom number generation; Generating from U(0,1); Multiplicative congruential method; Mixed congruential method; Universality of Uniforms.   </li> </ul> </td>
+                                                <td>  </td>  
+                                                <td> 
+                                                    <ul> 
+                                                        <li> <a href = "assets/DA244-coursewebpage/random_number_generation_mcm.R"> Generating random numbers from U(0,1) </a> </li>
+                                                        </ul>
+                                                        
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td> 6 </td>
+                                                <td> 19-Jan-2024 </td>
+                                                <td> 
+                                                    <ul> 
+                                                        <li> Quiz 1 </li>
+                                                        <li> Random number generation from Discrete distributions: Inverse Transform method; Examples: Bernoulli, Poisson     </li> 
+                                                    </ul> 
+                                                </td>
+                                        
+                                            </tr>
+
+
+                                            <tr>
+                                                <td> 7 </td>
+                                                <td> 1-Feb-2024 </td>
+                                                <td> 
+                                                    <ul> 
+                                                        
+                                                        <li> Random number generation from Discrete distributions: Acceptance Rejection method    </li> 
+                                                    </ul> 
+                                                </td>
+                                        
+                                            </tr>
+
+                                            <tr>
+                                                <td> 8 </td>
+                                                <td> 2-Feb-2024 </td>
+                                                <td> 
+                                                    <ul> 
+                                                        
+                                                        <li> Random number generation from Discrete distributions: Acceptance Rejection method example; Composition method; Zero Inflated Poisson Distribution    </li> 
+                                                    </ul> 
+                                                </td>
+
+                                                <td> </td>
+
+                                                <td> 
+                                                    <ul> 
+                                                        <li> <a href = "assets/DA244-coursewebpage/AR-sampler-binomial.R">  Accept/Reject Sampler to draw from Binomial(n,p) </a> </li>
+                                                        </ul>
+                                                        
+                                                </td>
+
+                                               
+                                        
+                                            </tr>
+                                            <tr>
+                                                <td> 9 </td>
+                                                <td> 5-Feb-2024 </td>
+                                                <td> 
+                                                    <ul> 
+                                                        <li> Cauchy distribution; Gamma distribution</li>
+                                                        <li> Random number generation from Continuous distributions: Inverse Transform method; when it works and when it does not work.  </li> 
+                                                    </ul> 
+                                                </td>
+                                        
+                                            </tr>
+
+
+                                            <tr>
+                                                <td> 10 </td>
+                                                <td> 7-Feb-2024 </td>
+                                                <td> 
+                                                    <ul> 
+                                                
+                                                        <li> Random number generation from Continuous distributions: Accept-Reject method.  </li> 
+                                                    </ul> 
+                                                </td>
+                                        
+                                            </tr>
+
+                                            <tr>
+                                                <td> 11 </td>
+                                                <td> 8-Feb-2024 </td>
+                                                <td> 
+                                                    <ul> 
+                                                        <li> Random number generation from Continuous distributions: Accept-Reject method: Examples </li>
+                                                    </ul> 
+                                                </td>
+
+                                                
+                                                <td> </td>
+
+                                                <td> 
+                                                    <ul> 
+                                                        <li> <a href = "assets/DA244-coursewebpage/AR-sampler-beta.R">  Accept/Reject Sampler to draw from Beta distribution </a> </li>
+                                                        </ul>
+                                                        
+                                                </td>
+                                        
+                                            </tr>
+
+
+                                            <tr>
+                                                <td> 12 </td>
+                                                <td> 9-Feb-2024 </td>
+                                                <td> 
+                                                    <ul> 
+                                                        <li> AR sampler for Normal distribution</li>
+                                                        <li> Sampling from a circle </li>
+                                                     </ul> 
+                                                </td>
+
+                                                <td> </td>
+
+                                                <td> 
+                                                    <ul> 
+                                                        <li> <a href = "assets/DA244-coursewebpage/AR-sampler-circle.R">  Accept/Reject Sampler to draw from a unit circle </a> </li>
+                                                        </ul>
+                                                        
+                                                </td>
+                                        
+                                            </tr>
+
+                                            <tr>
+                                                <td> 13 </td>
+                                                <td> 12-Feb-2024 </td>
+                                                <td> 
+                                                    <ul> 
+                                                        <li> Box-Muller Transformation Method </li>
+                                                        <li> Ratio of Uniforms Method  </li> 
+                                                    </ul> 
+                                                </td>
+                                        
+                                            </tr>
+
+
+                                            <tr>
+                                                <td> 14 </td>
+                                                <td> 15-Feb-2024 </td>
+                                                <td> 
+                                                    <ul> 
+                                                    
+                                                        <li> Ratio of Uniforms Method Continued </li> 
+                                                    </ul> 
+                                                </td>
+
+                                                <td> </td>
+
+                                                <td> 
+                                                    <ul> 
+                                                        <li> <a href = "assets/DA244-coursewebpage/Ratio-of-Uniforms-Expo(1).R">  Ratio of Uniform to draw from Exponential distribution </a> </li>
+                                                        </ul>
+                                                        
+                                                </td>
+                                        
+                                            </tr>
+
+
+                                            <tr>
+                                                <td> 15 </td>
+                                                <td> 16-Feb-2024 </td>
+                                                <td> 
+                                                    <ul> 
+                                                        <li> Choosing proposals for AR sampler </li>
+                                                        <li> Choosing parameters for proposals </li> 
+                                                    </ul> 
+                                                </td>
+                                        
+                                            </tr>
+                                            
+                                        
+
+                                            <tr>
+                                                <td> 16 </td>
+                                                <td> 21-Feb-2024 </td>
+                                                <td> 
+                                                    <ul> 
+                                                        <li> Useful relationships between different families of distributions </li>
+                                                        <li> Sampling from Mixture distributions: Mixture of Normals; Zero Inflated Gamma distribution </li> 
+                                                    </ul> 
+                                                </td>
+                                        
+                                            </tr>
+
+                                            <tr>
+                                                <td> 17 </td>
+                                                <td> 22-Feb-2024 </td>
+                                                <td> 
+                                                    <ul> 
+                                                        <li> Sampling from Multidimensional Distributions </li>
+                                                        <li> Saming from Multivariate Normal Distribution</li> 
+                                                    </ul> 
+                                                </td>
+                                        
+                                                <td> </td>
+
+                                                <td> 
+                                                    <ul> 
+                                                        <li> <a href = "assets/DA244-coursewebpage/MVN-sampler.R">  Multivariate Normal Distribution </a> </li>
+                                                        </ul>
+                                                        
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td> 18 </td>
+                                                <td> 23-Feb-2024 </td>
+                                                <td> 
+                                                    <ul> 
+                                                        <li> Importance Sampling </li>
+                                                        <li> Example: Moments of Gamma distribution </li> 
+                                                    </ul> 
+                                                </td>
+                                        
+                                                <td> </td>
+
+                                                <td> 
+                                                    <ul> 
+                                                        <li> <a href = "assets/DA244-coursewebpage/Importance-sampling-gamma.R">  Importance Sampling: Moments of Gamma distribution </a> </li>
+                                                        </ul>
+                                                        
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td> 19 </td>
+                                                <td> 6-March-2024 </td>
+                                                <td> 
+                                                    <ul> 
+                                                        <li> Importance Sampling continued </li>
+                                                        <li> Optimal Importance proposals </li>
+                                                        <li> Example: Moments of Gamma distribution </li>
+                                                    </ul> 
+                                                </td>
+                                        
+                                                <td> </td>
+
+                                                <td> 
+                                                    <ul> 
+                                                        <li> <a href = "assets/DA244-coursewebpage/Importance-sampling-gamma-comparison.R">  Importance Sampling: Moments of Gamma distribution </a> </li>
+                                                        </ul>
+                                                        
+                                                </td>
+                                            </tr>
+
+
+                                            <tr>
+                                                <td> 20 </td>
+                                                <td> 7-March-2024 </td>
+                                                <td> 
+                                                    <ul> 
+                                                        <li> </li>
+                                                        <li>  </li> 
+                                                        <li>  </li> 
+                                                    </ul> 
+                                                </td>
+                                        
+                                                <td> </td>
+
+                                                <td> 
+                                                    <ul> 
+                                                        <li>  </li>
+                                                        </ul>
+                                                        
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td> 21 </td>
+                                                <td> 8-March-2024 </td>
+                                                <td> 
+                                                    <ul> 
+                                                        <li> Introduction to Stochastic Processes </li>
+                                                        <li> Bernoulli Process </li>
+                                                    </ul> 
+                                                </td>
+                                        
+                                                <td> </td>
+
+                                                <td> 
+                                                    <ul> 
+                                                        <li>  </li>
+                                                        </ul>
+                                                        
+                                                </td>
+                                            </tr>
+
+
+                                            <tr>
+                                                <td> 22 </td>
+                                                <td> 11-March-2024 </td>
+                                                <td> 
+                                                    <ul> 
+                                                        <li>  </li>
+                                                        <li>  </li>
+                                                    </ul> 
+                                                </td>
+                                        
+                                                <td> </td>
+
+                                                <td> 
+                                                    <ul> 
+                                                        <li>  </li>
+                                                        </ul>
+                                                        
+                                                </td>
+                                            </tr>
+
+
+                                            <tr>
+                                                <td> 23 </td>
+                                                <td> 14-March-2024 </td>
+                                                <td> 
+                                                    <ul> 
+                                                        <li> Bernoulli Process continued </li>
+                                                        <li> How many jobs arrived in a particular time period? </li>
+                                                        <li> Given the number of jobs, how much time did it take or them to arrive? </li>
+                                                        <li> Memorylessness property </li>
+                                                    </ul> 
+                                                </td>
+                                        
+                                                <td> </td>
+
+                                                <td> 
+                                                    <ul> 
+                                                        <li>  </li>
+                                                        </ul>
+                                                        
+                                                </td>
+                                            </tr>
+
+
+                                            <tr>
+                                                <td> 24 </td>
+                                                <td> 15-March-2024 </td>
+                                                <td> 
+                                                    <ul> 
+                                                        <li> Splitting a Bernoulli Process </li>
+                                                        <li> Merging two independent Bernoulli Processes </li>
+                                                        <li> Example: Mosquito bite in a rainforest </li>
+                                                        <li> Poisson Approximation to Binomial </li>
+                                                    </ul> 
+                                                </td>
+                                        
+                                                <td> </td>
+
+                                                <td> 
+                                                    <ul> 
+                                                        <li>  </li>
+                                                        </ul>
+                                                        
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td> 25 </td>
+                                                <td> 20-March-2024 </td>
+                                                <td> 
+                                                    <ul> 
+                                                        <li> Poisson Process </li>
+                                                        <li> Example: Emails in your inbox </li>
+                                                        <li> Time it takes for the kth arrial </li>
+                                                    </ul> 
+                                                </td>
+                                        
+                                                <td> </td>
+
+                                                <td> 
+                                                    <ul> 
+                                                        <li>  </li>
+                                                        </ul>
+                                                        
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td> 26 </td>
+                                                <td> 21-March-2024 </td>
+                                                <td> 
+                                                    <ul> 
+                                                        <li> Memorylessness Property of Exponentials </li>
+                                                        <li> Memorylessness and Fresh start property </li>
+                                                        <li> Interarrival times </li>
+                                                        <li> Merging Poisson Processes </li>
+                                                    </ul> 
+                                                </td>
+                                        
+                                                <td> </td>
+
+                                                <td> 
+                                                    <ul> 
+                                                        <li>  </li>
+                                                        </ul>
+                                                        
+                                                </td>
+                                            </tr>
+
+
+                                            <tr>
+                                                <td> 27 </td>
+                                                <td> 26-March-2024 </td>
+                                                <td> 
+                                                    <ul> 
+                                                        <li> Summary of results: Bernoulii process & Poisson process </li>
+                                                        <li> Example: Catching fish  </li>
+                                                        <li> Example: Burnout of a light bulb </li>
+                                                        <li> Thinning of a Poisson Process </li>
+                                                    </ul> 
+                                                </td>
+                                        
+                                                <td> </td>
+
+                                                <td> 
+                                                    <ul> 
+                                                        <li>  </li>
+                                                        </ul>
+                                                        
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td> 28 </td>
+                                                <td> 27-March-2024 </td>
+                                                <td> 
+                                                    <ul> 
+                                                        <li> Simulating a Poisson process </li>
+                                                        <li> Conditioning  </li>
+                                                    </ul> 
+                                                </td>
+                                        
+                                                <td> </td>
+
+                                                <td> 
+                                                    <ul> 
+                                                        <li>  </li>
+                                                        </ul>
+                                                        
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td> 29 </td>
+                                                <td> 28-March-2024 </td>
+                                                <td> 
+                                                    <ul> 
+                                                        <li> Quiz 4 </li>
+                                                        <li> Discussion of Mid semester paper </li>
+                                                    </ul> 
+                                                </td>
+                                        
+                                                <td> </td>
+
+                                                <td> 
+                                                    <ul> 
+                                                        <li>  </li>
+                                                        </ul>
+                                                        
+                                                </td>
+                                            </tr>
+
+
+                                            <tr>
+                                                <td> 30 </td>
+                                                <td> 1-April-2024 </td>
+                                                <td> 
+                                                    <ul> 
+                                                        <li> Markov Chains </li>
+                                                        <li> Example: Checkout counter in a supermarket </li>
+                                                        <li> States; Transition probability graph; Transition probability matrix </li>
+                                                    </ul> 
+                                                </td>
+                                        
+                                                <td> </td>
+
+                                                <td> 
+                                                    <ul> 
+                                                        <li>  </li>
+                                                        </ul>
+                                                        
+                                                </td>
+                                            </tr>
+
+
+                                            <tr>
+                                                <td> 31 </td>
+                                                <td> 3-April-2024 </td>
+                                                <td> 
+                                                    <ul> 
+                                                        <li> Examples of Markov Chains </li>
+                                                        <li> Transition probabilities for larger time scales </li>
+                                                        <li> A key recursion; example </li>
+                                                    </ul> 
+                                                </td>
+                                        
+                                                <td> </td>
+
+                                                <td> 
+                                                    <ul> 
+                                                        <li>  </li>
+                                                        </ul>
+                                                        
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td> 32 </td>
+                                                <td> 5-April-2024 </td>
+                                                <td> 
+                                                    <ul> 
+                                                        <li> nth step transition matrix </li>
+                                                        <li> Chapman-Kolmogorov Relationship </li>
+                                                        <li> accessibile states; communicate; communication is an equivalence relation </li>
+                                                        <li> Classification of states: reccurent and transient </li>
+                                                    </ul> 
+                                                </td>
+                                        
+                                                <td> </td>
+
+                                                <td> 
+                                                    <ul> 
+                                                        <li>  </li>
+                                                        </ul>
+                                                        
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td> 33 </td>
+                                                <td> 8-April-2024 </td>
+                                                <td> 
+                                                    <ul> 
+                                                        <li> Communication classes; example </li>
+                                                        <li> Irreducibility </li>
+                                                        <li> First passage time </li>
+                                                        <li> Classification of states: reccurent and transient </li>
+                                                        <li> Periodicity </li>
+                                                    </ul> 
+                                                </td>
+                                        
+                                                <td> </td>
+
+                                                <td> 
+                                                    <ul> 
+                                                        <li>  </li>
+                                                        </ul>
+                                                        
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td> 34 </td>
+                                                <td> 9-April-2024 </td>
+                                                <td> 
+                                                    <ul> 
+                                                        <li> Periodicity </li>
+                                                        <li> Example </li>
+                                                        <li> Steady State Convergence Theorem </li>
+                                                    </ul> 
+                                                </td>
+                                        
+                                                <td> </td>
+
+                                                <td> 
+                                                    <ul> 
+                                                        <li>  </li>
+                                                        </ul>
+                                                        
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td> 35 </td>
+                                                <td> 10-April-2024 </td>
+                                                <td> 
+                                                    <ul> 
+                                                        <li> Quiz 5 </li>
+                                                    </ul> 
+                                                </td>
+                                        
+                                                <td> </td>
+
+                                                <td> 
+                                                    <ul> 
+                                                        <li>  </li>
+                                                        </ul>
+                                                        
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td> 36 </td>
+                                                <td> 12-April-2024 </td>
+                                                <td> 
+                                                    <ul> 
+                                                        <li> Steady state probabilities </li>
+                                                        <li> Steady state convergence theorem</li>
+                                                        <li> Example</li>
+                                                        <li> Balance equations; Visiting frequency interpretation </li>
+                                                    </ul> 
+                                                </td>
+                                        
+                                                <td> </td>
+
+                                                <td> 
+                                                    <ul> 
+                                                        <li>  </li>
+                                                        </ul>
+                                                        
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td> 37 </td>
+                                                <td> 17-April-2024 </td>
+                                                <td> 
+                                                    <ul> 
+                                                        <li> Birth Death Process </li>
+                                                        <li> What happens in the long run?; Special cases </li>
+                                                    </ul> 
+                                                </td>
+                                        
+                                                <td> </td>
+
+                                                <td> 
+                                                    <ul> 
+                                                        <li> <a href = "assets/DA244-coursewebpage/Birth-Death-process-simulation.R">  Birth Death process simulation </a> </li>
+                                                        </ul>
+                                                        
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td> 38 </td>
+                                                <td> 19-April-2024 </td>
+                                                <td> 
+                                                    <ul> 
+                                                        <li> Simple random walk </li>
+                                                        <li> Properties; example </li>
+                                                    </ul> 
+                                                </td>
+                                        
+                                                <td> </td>
+
+                                                <td> 
+                                                    <ul> 
+                                                        <li>  </li>
+                                                        </ul>
+                                                        
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td> 39 </td>
+                                                <td> 20-April-2024 </td>
+                                                <td> 
+                                                    <ul> 
+                                                        <li> Quiz 6 </li>
+                                                        <li> Feedback </li>
+                                                    </ul> 
+                                                </td>
+                                        
+                                                <td> </td>
+
+                                                <td> 
+                                                    <ul> 
+                                                        <li>  </li>
+                                                        </ul>
+                                                        
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td> 40 </td>
+                                                <td> 22-April-2024 </td>
+                                                <td> 
+                                                    <ul> 
+                                                        <li> Brownian motion: Defnition </li>
+                                                        <li> Construction of Brownian Motion from simple symmetric random walk </li>
+                                                        <li> Example </li>
+                                                    </ul> 
+                                                </td>
+                                        
+                                                <td> </td>
+
+                                                <td> 
+                                                    <ul> 
+                                                        <li> <a href = "assets/DA244-coursewebpage/simulating-brownian-motion.R">  Simulating Brownian motion </a> </li>
+                                                    </ul>
+                                                        
+                                                </td>
+                                            </tr>
+
+
+                                        </table>    
+                                    
+
+                                </section>
