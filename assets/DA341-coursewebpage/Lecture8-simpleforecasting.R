@@ -25,3 +25,22 @@ brick_fc |>
   labs(title = "Clay brick production in Australia",
        y = "Millions of bricks") +
   guides(colour = guide_legend(title = "Forecast"))
+
+##Example 2: Facebook stock prices
+#Extract data
+fb_stock <- gafa_stock |>
+  filter(Symbol == "FB") |>
+  mutate(trading_day = row_number()) |>
+  update_tsibble(index = trading_day, regular = TRUE)
+
+# Specify, estimate and forecast
+fb_stock |>
+  model(
+    Mean = MEAN(Close),
+    Naive = NAIVE(Close),
+    Drift = RW(Close ~ drift())
+  ) |>
+  forecast(h = 42) |>
+  autoplot(fb_stock, level = NULL) +
+  labs(title = "Facebook closing stock price", y = "$US") +
+  guides(colour = guide_legend(title = "Forecast"))
