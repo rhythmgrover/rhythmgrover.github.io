@@ -1,0 +1,475 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>DA 241 Statistical Foundations for Data Science</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head> <!--git status -->
+	<body class="is-preload">
+
+        <!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="DA241.html" class="logo"><strong></strong> </a>  
+									<ul class="icons">
+										
+									</ul>
+								</header>
+
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<header>
+											<h1>DA 241 Statistical Foundations for Data Science<br />
+											</h1>
+                                            <h2> Webpage for the course</h2>
+                                        </header>
+                                    </div>
+                                </section>
+                                <!--<p> This is the webpage for the DA 241. </p>
+                                <p> <span style="color:#297e9a"> Announcement 1:</span> Class tomorrow from 10 am to 10:55 am in 5103. And from 11 am to 11:55 am in 5001. </p>-->
+                                <!--<p> <span style="color:#297e9a"> Announcement 2:</span> Submit assignment 1 after renaming it as <span style="color:#9a2980">DA_241_Assignment1_NAME.pdf </span> today again between 9 pm and 10 pm on Teams. No late turn ins will be entertained. </p>-->
+
+                                <section>
+                                    <h2>  Course Description </h2>
+                                    <p> This course is an introduction to statistical ideas and tools, underlying the foundations of data science. The course is broadly divided into 5 modules:
+                                       <ul>
+                                        <li>  Module 1 Descriptive Statistics </li>
+                                        <li>  Module 2 Probability & Random variables</li>
+                                        <li>  Module 3 Estimation & Inference</li>
+                                        <li>  Module 4 Statistical Modeling</li>
+                                        <li>  Module 5 Statistical Computing</li>
+                                       </ul>
+
+                                    </p>
+                                </section>
+                                <section>
+                                    <h2> Course Syllabus </h2>
+                                    <p>  Elements of descriptive statistics, averages, dispersion, skewness, quantiles; graphical displays, pie charts, bar charts, histograms, scatter plots, box plots, steam and leaf plots. </p>
+ 
+                                    <p>     Probability spaces, conditional probability, independence; Random variables, distribution functions, probability mass and density functions, functions of random variables, standard univariate discrete and
+                                        continuous distributions; Mathematical expectations, moments, moment generating functions, inequalities; Multidimensional random variables, joint, marginal and conditional distributions, conditional expectations,
+                                        independence, covariance, correlation, standard multivariate distributions, functions of multidimensional random variables; Forms of convergence, law of large numbers, central limit theorem.</p>
+                                        
+                                        <p>Sampling distributions; Point estimation - estimators, minimum variance
+                                        unbiased estimation, maximum likelihood estimation, method of moments estimation, Cramer -Rao inequality, consistency; Interval estimation; Testing of hypotheses - tests and critical regions, Neymann-Pearson lemma, uniformly most powerful tests, likelihood ratio tests. </p>
+                                        
+                                        <p>Linear regression, ANOVA, discriminant analysis.</p>
+                                        
+                                        <p> Computing techniques, cross-validation, bootstrap re-sampling. </p>
+                                </section>
+
+                                <section> 
+                                <h2>Course Logistics</h2>
+                                <p>  </p>
+                                <ul>
+                                 <li>Schedule: Slot B, 9:00 am - 9:55 am Monday, 10:00 am - 10:55 am Tuesday, 11:00 am - 11:55 am Wednesday </li>
+                                <li> Venue: 5103, Core 5.</li>
+                               <!-- <li> Course Calendar </li> -->
+                                
+                                </ul>
+                                </section>
+                                <section> 
+                                    <h2> Course Evaluation </h2>
+                                    <p> There will 5 surprise quizzes and 5 assignments, a mid-semester examination and an end-semester
+                                        examination with the following weightage: </p>
+                                        <ul>
+                                        <li> Quizzes: 20% </li>
+                                        <li> Assignments: 20% </li>
+                                        <li> Mid semester exam: 30% </li>
+                                        <li> End semester exam: 30% </li>
+                                        </ul>
+                                     
+                                </section>
+                                
+                                <section> 
+                                    <h2> Some references (not an exhaustive list) </h2>
+                                    <p> </p>
+                                        <ul>
+                                        <li> Hogg, R.V., McKean, J. and Craig, A.T., Introduction to mathematical statistics, 7th edition, Pearson Education, 2012.</li>
+                                        <li> Rice, J.A., Mathematical statistics and data analysis. 3rd edition, Cengage Learning, 2006</li>
+                                        <li> Wasserman, L., All of statistics: a concise course in statistical inference, Volume 26, New York Springer, 2004 </li>
+                                        <li> Rohatgi, V.K. and Saleh, A.M.E., An introduction to probability and statistics, 3rd edition, John Wiley & Sons, 2015. </li>
+                                        <li> DeGroot, M.H. and Schervish, M.J., Probability and statistics, 4th edition, Pearson Education, 2010. </li>    
+                                    </ul>
+                                     
+                                </section>
+
+
+                                <section>
+                                    <h2> Topics Covered during the weeks </h2>
+                                    
+                                       <table>
+                                        <tr>
+                                          <th> Lecture </th>  
+                                          <th> Date </th>
+                                          <th> Topic </th>
+                                          <th> Resources </th> 
+                                         <th> R codes </th> 
+                                        </tr>
+
+                                        <tr>
+                                            <td> 1 </td>
+                                            <td> 26-Jul-2023 </td>
+                                            <td> <ul> <li> First Handout </li> <li> Some examples</li> </ul> </td>
+                                            <td> <ul> <li> <a href = "assets/DA241-coursewebpage/first_handout.pdf"> First handout </a> </li> <li> <a href = "assets/DA241-coursewebpage/First class.pdf"> Some examples </a> </li> </ul> </td>  
+                                        </tr>
+
+                                        
+                                        <tr>
+                                            <td> 2 </td>
+                                            <td> 31-Jul-2023 </td>
+                                            <td> Data and Questions </td>
+                                            <td> <ul> <li> <a href = "assets/DA241-coursewebpage/Lecture2.pdf"> Lecture 2 Class notes </a> </li> 
+                                            <li> Book: Elements of Statistics by Daly, F. et al. </li>
+                                            </ul></td>  
+                                        </tr>
+    
+                                        
+                                        <tr>
+                                            <td> 3 </td>
+                                            <td> 1-Aug-2023 </td>
+                                            <td> Graphical Displays: Pie charts, Bar graphs, Histograms, Scatter plots  </td>
+                                            <td> Data <ul> 
+                                                <li> <a href = "assets/DA241-coursewebpage/data files & Rcodes/USA workforce.csv"> USA workforce data  </a> </li>
+                                                <li> <a href = "assets/DA241-coursewebpage/data files & Rcodes/Infants with SIRD.csv"> Infant weights data  </a> </li>
+                                                <li> <a href = "assets/DA241-coursewebpage/data files & Rcodes/Runner dataset.csv"> Runners of the Tyneside Great North run data  </a> </li>
+                                                <li> <a href = "assets/DA241-coursewebpage/data files & Rcodes/alcohol_cirrohsis_data.csv"> Alcoholism and Cirrhosis data set  </a> </li>
+                                                <li> <a href = "assets/DA241-coursewebpage/data files & Rcodes/Body and weights.csv"> Body and Brain weights of animals </a> </li>
+                                                <li> <a href = "assets/DA241-coursewebpage/data files & Rcodes/Nuclear power data.csv"> Nuclear Power stations data  </a> </li>
+                                            </ul> </td> 
+                                            <td> Codes <ul> 
+                                                <li> <a href = "assets/DA241-coursewebpage/data files & Rcodes/Rbasics.pdf"> Starting with R  </a> </li>
+                                                <li> <a href = "assets/DA241-coursewebpage/data files & Rcodes/pie chart for tattoo data.r"> Pie Chart: Tattoo data  </a> </li>
+                                                <li> <a href = "assets/DA241-coursewebpage/data files & Rcodes/pie chart for Nuclear.R"> Pie Chart: Nuclear power data data  </a> </li>
+                                                <li> <a href = "assets/DA241-coursewebpage/data files & Rcodes/bar_chart_nuclear_reactors.R"> Bar Chart: Nuclear power data  </a> </li>
+                                                <li> <a href = "assets/DA241-coursewebpage/data files & Rcodes/bar_chart_USA_workforce.R"> Bar Chart: USA workforce data  </a> </li>
+                                                <li> <a href = "assets/DA241-coursewebpage/data files & Rcodes/histogram_for_Infantsweights-SIRDS.R"> Histogram: Infant weights data </a> </li>
+                                                <li> <a href = "assets/DA241-coursewebpage/data files & Rcodes/scatterplot_alcoholdata.R"> Scatter Plot: Alcoholism and Cirrhosis data  </a> </li>
+                                                <li> <a href = "assets/DA241-coursewebpage/data files & Rcodes/scatterplot_body-brain-weightdata.R"> Scatter Plot: Body and Brain weight data  </a> </li>
+                                            </ul> </td> 
+                                        </tr>
+                                        <tr>
+                                            <td> </td> 
+                                            <td> Thanks to Karan Kumawat, we have a nice bar chart for Nuclear powers of different countries with the proper labels here: <a href = "assets/DA241-coursewebpage/data files & Rcodes/bar_chart_nuclear_reactors-KaranK.R"> Code </a>, <a href = "assets/DA241-coursewebpage/data files & Rcodes/Barplot-nuclearreactors-KaranK.png"> Barchart </a></td>
+                                        </tr>
+       
+                                        <tr>
+                                            <td> 4 </td>    
+                                            <td> 2-Aug-2023 </td>
+                                            <td> Measures of centre and spread; Skewness; Five-figure summary and Box and Whiskers Plots </td>
+                                            <td> Book: Elements of Statistics by Daly, F. et al. <a href = "#"> </a></td>
+                                        
+                                        </tr>
+
+                                        <tr>
+                                            <td> 5 </td>    
+                                            <td> 7-Aug-2023 </td>
+                                            <td> Probability as a mathematical framework; Setting up a Probabilistic Model: Random experiment; Sample Space; Probability Law </td>
+                                            <td>  <a href = "#"> </a></td>
+                                        
+                                        </tr>
+                                                 
+                                             
+                                        <tr>
+                                            <td> 6 </td>    
+                                            <td> 8-Aug-2023 </td>
+                                            <td> Probability axioms; Consequences of Probability axioms; Birthday Problem </td>
+                                            <td>  <a href = "#"> </a></td>
+                                            <td>  <a href = "assets/DA241-coursewebpage/data files & Rcodes/simulating-birthday problem.R"> Birthday Problem </a></td>
+                                        
+                                        </tr>
+
+                                        <tr>
+                                            <td> 7 </td>    
+                                            <td> 9-Aug-2023 </td>
+                                            <td> Independent events; Newton-Pepys problem; Conditional Probability; Multiplication Rule; Bayes' Rule </td>
+                                            <td>  <a href = "#"> </a></td>
+                                            <td>  <a href = "#"> </a></td>
+                                        
+                                        </tr>
+
+                                        <tr>
+                                            <td> 8-9 </td>    
+                                            <td> 12-Aug-2023  (Make up class for 16,17-Aug-2023)</td>
+                                            <td> Conditional Probability; Total Probability Law; Tree Diagrams; Monty Hall Problem </td>
+                                            <td>  <a href = "#"> </a></td>
+                                            <td>  Monty Hall Problem <a href = "assets/DA241-coursewebpage/data files & Rcodes/Monty_hall_simulation.R"> Code 1 </a>, <a href = "assets/DA241-coursewebpage/data files & Rcodes/Monty_hall_game_function.R"> Code 2 </a> </td>
+                                        
+                                        </tr>
+
+                                        <tr>
+                                            <td> 10 </td>    
+                                            <td> 14-Aug-2023 </td>
+                                            <td> Quiz 1 </td>
+                                            <td> <a href = "assets/DA241-coursewebpage/Quiz 1 solutions and marking scheme.pdf"> Quiz 1 solutions and marking scheme </a> </td>
+                                            <td>  <a href = "#"> </a></td>
+                                        
+                                        </tr>
+
+                                        <tr>
+                                            <td>  </td>    
+                                            <td> 15-Aug-2023 </td>
+                                            <td> <a href = "assets/DA241-coursewebpage/Assignments/DA241-assignment1.pdf">  Assignment 1 </a></td>
+                                            <td> We have a Teams group now: Grp_DA241-July-Nov-2023. If you are a part of this class and you are not added in the group please write to me immediately. The assignment is uploaded there and the due date is 11:59 pm, 20-Aug-2023. Late turn-ins will stop after 11:59 pm, 21-Aug-2023. Type the solutions (handwritten will not be accepatble) in Word/Latex and submit the PDF only.  </td>
+                                            <td> <a href = "#"> </a></td>
+                                        
+                                        </tr>
+
+                                        <tr>
+                                            <td> 11 </td>    
+                                            <td> 28-Aug-2023  </td>
+                                            <td> Random Variables; Discrete Random Variables; Probability Mass Function; Examples  </td>
+                                            <td>  <a href = "#"> </a></td>
+                                            <td>   </td>
+                                        
+                                        </tr>
+
+                                        <tr>
+                                            <td> 12,13 </td>    
+                                            <td> 29-Aug-2023  </td>
+                                            <td> Review Discrete Random Variables and PMFs; Special Discrete Random Variables: Bernoulli, Indicator, Binomial, Hypergeometric, Geometric, Poisson. Poisson Paradigm and Binomial Convergence to Poisson </td>
+                                            <td>  <a href = "#"> </a></td>
+                                            <td>   </td>
+                                        
+                                        </tr>
+
+                                        <tr>
+                                            <td> 14 </td>    
+                                            <td> 30-Aug-2023  </td>
+                                            <td>  Continuous Random Variables; Probability Density Functions; Cumulative Distribution Functions and thier Properties; Discrete Example. </td>
+                                            <td>  <a href = "#"> </a></td>
+                                            <td>   </td>
+                                        
+                                        </tr>
+
+                                        <tr>
+                                            <td>  </td>    
+                                            <td> 3-Sep-2023 </td>
+                                            <td> <a href = "assets/DA241-coursewebpage/Assignments/DA241-assignment2.pdf">  Assignment 2 </a></td>
+                                            <td> Please check Teams group: Grp_DA241-July-Nov-2023. The assignment is uploaded there and the due date is 11:59 pm, 9-Sep-2023. Late turn-ins will stop after 11:59 pm, 10-Sep-2023. Type the solutions (handwritten will not be accepatble) in Word/Latex and submit the PDF only. All the other rules can be found on Teams.  </td>
+                                            <td> <a href = "assets/DA241-coursewebpage/Assignment 2, question 5.pdf"> Question 5 solution </a></td>  
+                                        
+                                        </tr>
+
+                                        <tr>
+                                            <td> 15 </td>    
+                                            <td> 4-Sep-2023  </td>
+                                            <td> Continuous Random Variables; Special r.v.s: Uniform, Piecewise Constant, Exponential, Normal; Universality of Uniform; Simulations  </td>
+                                            <td>  <a href = "#"> </a></td>
+                                            <td>   </td>
+                                        
+                                        </tr>
+
+                                        <tr>
+                                            <td> 16, 17 </td>    
+                                            <td> 5-Sep-2023  </td>
+                                            <td>  Normal random variables; Calculating Normal probabilities; Standardising a Normal random variable; Joint Distribustions; Marginals; Conditional Density; Independence of random variables; Some examples  </td>
+                                            <td>  <a href = "#"> </a></td>
+                                            <td>   </td>
+                                        
+                                        </tr>
+
+                                        <tr>
+                                            <td> 18 </td>    
+                                            <td> 11-Sep-2023  </td>
+                                            <td>  Expectation of a random variable; Properties of Expectations; Expectations of famous discrete random variables  </td>
+                                            <td> <a href = "assets/DA241-coursewebpage/Assignments/practice_assignment_Expectations.pdf "> Practice Assignment 1  </a></td>
+                                            <td>   </td>
+                                        
+                                        </tr>
+
+                                        <tr>
+                                            <td> 19, 20 </td>    
+                                            <td> 12-Sep-2023  </td>
+                                            <td>  Quiz 2; Expectations continued; Law of Unconscious statistician Expected value of local maxima in random permutation of integers; Finding means and variances of common continuous distributions; Memorylessness property of Exponentials </td>
+                                            <td>  <a href = "https://en.wikipedia.org/wiki/Law_of_the_unconscious_statistician"> LOTUS </a></td>
+                                            <td>   </td>
+                                        
+                                        </tr>
+
+                                        <tr>
+                                            <td> 21 </td>    
+                                            <td> 13-Sep-2023  </td>
+                                            <td>  Quiz 2 solutions; Moment Generating Functions; Examples </td>
+                                            <td>  <a href = "assets/DA241-coursewebpage/Quiz 2 solutions and marking scheme.pdf"> Quiz 2 solutions and marking scheme </a> <br> <a href = "assets/DA241-coursewebpage/Assignments/practice_assignment_Moments.pdf"> Practice Assignment 2</a> </td>
+                                            <td>   </td>
+                                        
+                                        </tr>
+
+                                        <tr>
+                                            <td>  </td>    
+                                            <td> 19-Sep-2023  </td>
+                                            <td>  Mid-semester Examination </td>
+                                            <td>  <a href = "assets/DA241-coursewebpage/Mid-Sem solutions.pdf"> Mid-semester exam solutions </a></td>
+                                            <td>   </td>
+                                        
+                                        </tr>
+
+                                        <tr>
+                                            <td> 22 </td>    
+                                            <td> 25-Sep-2023  </td>
+                                            <td>  Covariance and Correlation; Conditional Expectation; Examples: Two envelope paradox; Patterns in repeated coin flips </td>
+                                            <td>  <a href = "assets/DA241-coursewebpage/nalebuff-2012-puzzles-the-other-person-s-envelope-is-always-greener.pdf"> The Other Person's Envelope is Always Greener by Barry Nalebuff </a></td>
+                                            <td>   </td>
+                                        
+                                        </tr>
+
+                                        <tr>
+                                            <td> 23 </td>    
+                                            <td> 26-Sep-2023  </td>
+                                            <td> Conditional Expectation continued </td>
+                                            <td> </td>
+                                            <td>   </td>
+                                        
+                                        </tr>
+
+                                        <tr>
+                                            <td> 24 </td>    
+                                            <td> 27-Sep-2023  </td>
+                                            <td> Inequalities: Cauchy-Schwartz inequality; Jensen's inequality; Markov's inequality; Chebychev's inequality; Convergence of random variables in probability  </td>
+                                            <td> </td>
+                                            <td>   </td>
+                                        
+                                        </tr>
+
+                                        <tr>
+                                            <td> 25 </td>    
+                                            <td> 3-Oct-2023  </td>
+                                            <td> Weak Law of Large Numbers (WLLN); Pollster's problem; Demonstration of WLLN in R </td>
+                                            <td> </td>
+                                            <td> <a href = "assets/DA241-coursewebpage/data files & Rcodes/lawoflargenumbers.R"> WLLN Demonstration; </a> <a href = "assets/DA241-coursewebpage/data files & Rcodes/lln_animation_x_bernoulli.R"> WLLN_animation1; </a> <a href = "assets/DA241-coursewebpage/data files & Rcodes/lln_animation_x_normal.R">  WLLN_animation2 </a> </td>
+                                        
+                                        </tr>
+
+                                        <tr>
+                                            <td> 26 </td>    
+                                            <td> 4-Oct-2023  </td>
+                                            <td> Central Limit Theorem (CLT); Pollster's problem revisited; Demonstration of CLT in R </td>
+                                            <td> Check out some nice demonstrations here: <a href = http://www.randomservices.org/random/apps/index.html> http://www.randomservices.org/random/apps/index.html </a>. Also, some cool animations can be found here: <a href = "https://yihui.org/animation/"> https://yihui.org/animation/ </a> </td>
+                                            <td> <a href = "assets/DA241-coursewebpage/data files & Rcodes/centrallimittheorem.R"> CLT Demonstration; </a> <a href = "assets/DA241-coursewebpage/data files & Rcodes/clt_animation.R"> CLT Animation</td> 
+                                        </tr>
+
+                                        <tr>
+                                            <td> 27 </td>    
+                                            <td> 9-Oct-2023  </td>
+                                            <td> Statistical inference problems: Types of problems; Point Estimation  </td>
+                                            <td>  </td>
+                                            <td> </td>
+                                        
+                                        </tr>
+
+                                        <tr>
+                                            <td> 28 </td>    
+                                            <td> 10-Oct-2023  </td>
+                                            <td> Point Estimation: Some examples </td>
+                                            <td>  </td>
+                                            <td> </td>
+                                        
+                                        </tr>
+
+                                        <tr>
+                                            <td> 29 </td>    
+                                            <td> 11-Oct-2023  </td>
+                                            <td> Desirable properties of estimators: Unbiasedness; Consistency; "small" Mean Squared Errors; Methods of estimation: Least Squares method; Method of Moments.  </td>
+                                            <td>  </td>
+                                            <td> </td>
+                                        
+                                        </tr>
+
+                                        <tr>
+                                            <td> 30, 31 </td>    
+                                            <td> 16-Oct-2023  </td>
+                                            <td>  Maximum Likelihood Estimation; Examples; Quiz 3 </td>
+                                            <td> <a href = "assets/DA241-coursewebpage/Quiz 3 solutions and marking scheme.pdf"> Quiz 3 solutions and marking scheme </a> </td>
+                                            <td> </td>
+                                        
+                                        </tr>
+
+                                        <tr>
+                                            <td> 32 </td>    
+                                            <td> 25-Oct-2023  </td>
+                                            <td>  Recall MLEs; Statistical Properties of MLEs; Fisher Information; Cramer-Rao lower bound </td>
+                                            <td>  </td>
+                                            <td> </td>
+                                        
+                                        </tr>
+                                        <tr>
+                                            <td>  </td>    
+                                            <td> 28-Oct-2023 </td>
+                                            <td> <a href = "assets/DA241-coursewebpage/Assignments/DA241-assignment3.pdf">  Assignment 3 </a></td>
+                                            <td> Please check Teams group: Grp_DA241-July-Nov-2023. The assignment is uploaded there and the due date is 11:59 pm, 3-Nov-2023. Late turn-ins will stop after 11:59 pm, same day. You can find the details of submission on Teams.  </td>
+                                            <td> </td>  
+                                        
+                                        </tr>
+
+
+
+                                        <tr>
+                                            <td> 33 </td>    
+                                            <td> 30-Oct-2023  </td>
+                                            <td> Confidence Intervals; Examples </td>
+                                            <td>  </td>
+                                            <td> </td>
+                                        
+                                        </tr>
+
+                                        <tr>
+                                            <td> 34 </td>    
+                                            <td> 31-Oct-2023  </td>
+                                            <td> Hypothesis Testing: Big picture; Likelihood Ratio Tests; Examples  </td>
+                                            <td>  </td>
+                                            <td> </td>
+                                        
+                                        </tr>
+
+                                        <tr>
+                                            <td> 35 </td>    
+                                            <td> 6-Nov-2023  </td>
+                                            <td> Hypothesis Testing: More general scenarios; Quiz 4  </td>
+                                            <td>  </td>
+                                            <td> </td>
+                                        
+                                        </tr>
+
+                                        <tr>
+                                            <td> 36 </td>    
+                                            <td> 7-Nov-2023  </td>
+                                            <td>  Simple linear regression; Least Squares estimation; Maximum Likelihood Estimation; Probabilistic setting of the problem </td>
+                                            <td>  </td>
+                                            <td> </td>
+                                        
+                                        </tr>
+
+                                        <tr>
+                                            <td> 37 </td>    
+                                            <td> 8-Nov-2023  </td>
+                                            <td> Multiple Linear Regression Model; Geometric Interpretation  </td>
+                                            <td>  </td>
+                                            <td> </td>
+                                        
+                                        </tr>
+
+                                        <tr>
+                                            <td> 38, 39 </td>    
+                                            <td> 14-Nov-2023  </td>
+                                            <td> A look ahead  </td>
+                                            <td>  </td>
+                                            <td> </td>
+                                        
+                                        </tr>
+
+
+                                    </table>    
+                                    
+
+                                </section>
+                               
