@@ -24,25 +24,35 @@ components(fit)
 components(fit) |> autoplot()
 
 ##Forecasting
-fc <- fit |> forecast(h = 10)
+fit |> 
+    forecast(h = 10)|> 
+    autoplot(aus_economy)+
+    labs(title = "Australian population", y = "Millions")
 
 
-##Damped Trend - comparison with linear trend
+##Damped Trend
 aus_economy |>
   model(
-    `Holt's method` = ETS(Pop ~ error("A") +
-                            trend("A") + season("N")),
     `Damped Holt's method` = ETS(Pop ~ error("A") +
-                                   trend("Ad", phi = 0.9) + season("N"))
-  ) |>
-  forecast(h = 15) |>
-  autoplot(aus_economy, level = NULL) +
+                                   trend("Ad", phi = 0.9) + season("N"))) |>
+  forecast(h = 20) |>
+  autoplot(aus_economy) +
   labs(title = "Australian population",
-       y = "Millions") +
-  guides(colour = guide_legend(title = "Forecast"))
+       y = "Millions")
+
+
+##Comparing the three methods
+fit <- aus_economy |>
+  filter(Year <= 2010) |>
+  model(
+    ses = ETS(Pop ~ error("A") + trend("N") + season("N")),
+    holt = ETS(Pop ~ error("A") + trend("A") + season("N")),
+    damped = ETS(Pop ~ error("A") + trend("Ad") + season("N"))
+  )
 
 ##check the coefficients
-tidy()
+  tidy(fit)
+ 
 
 ##check the accuracy
-accuracy()
+  accuracy(fit)
